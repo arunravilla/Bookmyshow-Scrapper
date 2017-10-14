@@ -1,0 +1,19 @@
+{
+  "name": "bookmyshow-scrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arun Prasad",
+  "license": "ISC",
+  "dependencies": {
+    "jsonfile": "^4.0.0",
+    "lodash": "^4.17.4",
+    "nodemailer": "^4.2.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "osmosis": "^1.1.4"
+  }
+}
