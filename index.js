@@ -18,15 +18,17 @@ var theatreFile = path.resolve('./theatre.json');
 /* subscribers email list */
 var subscribers = ['arunprasadvit@gmail.com'];
 
-var theatreList = [];
-if (fs.existsSync(theatreFile)) {
-	jsonfile.readFile(theatreFile, function (err, obj) {
-		theatreList = obj;
-		scrapSite(theatreList);
-	})
-} else {
-	scrapSite();
-}
+setInterval(function() {
+	var theatreList = [];
+	if (fs.existsSync(theatreFile)) {
+		jsonfile.readFile(theatreFile, function (err, obj) {
+			theatreList = obj;
+			scrapSite(theatreList);
+		})
+	} else {
+		scrapSite();
+	}
+}, 10000);
 
 function scrapSite(theatreList) {
 	var newlyScrappedTheatres = [];
